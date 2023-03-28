@@ -1,6 +1,8 @@
+require('dotenv').config(); 
 const pg = require("pg");
 
 const client = new pg.Client(process.env.DATABASE_URL || 'postgres://localhost:5432/theLastOfUs');
+client.password = "k77e2x7trKGzasSxL1eNDDauRQnnEB1s"
 
 async function createNewCharacter(charObj) {
     try {
